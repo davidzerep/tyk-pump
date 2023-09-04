@@ -48,7 +48,7 @@ jobs:
         run: >
           git config --global url."https://${TOKEN}@github.com".insteadOf "https://github.com"
       - name: Checkout of tyk-pump
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           fetch-depth: ${{ ! startsWith(github.ref, 'refs/tags') }}
 
@@ -155,7 +155,7 @@ jobs:
 
     steps:
       - name: Shallow checkout of tyk-pump
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 1
 
@@ -253,7 +253,7 @@ jobs:
           - debian:buster
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 1
 
@@ -294,7 +294,7 @@ jobs:
           - ubi8/ubi:8.3
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 1
 
@@ -327,7 +327,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 1
 
@@ -418,7 +418,7 @@ jobs:
 
     steps:
       - name: Checkout tyk-pump
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 1
 
